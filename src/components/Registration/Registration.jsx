@@ -53,34 +53,34 @@ const Registration = () => {
 
             <div className="hero-content flex flex-col">
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold text-primary">Register for Free!</h1>
+                    <h1 className="text-3xl font-bold text-[#81c784]">Register for Free!</h1>
                 </div>
-                <div className="card shrink-0 w-full max-w-sm shadow-md shadow-gray-400 bg-base-100 mt-5">
+                <div className="card shrink-0 w-full max-w-sm shadow-md shadow-gray-400 bg-[#81c784] mt-5">
                     <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="text-black">Name</span>
                             </label>
                             <input type="text" placeholder="your name" className="input input-bordered" {...register("name", { required: true })} />
-                            {errors.name && <span className="text-secondary">This field is required</span>}
+                            {errors.name && <span className="text-[#FF497C]">This field is required</span>}
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="text-black">Email</span>
                             </label>
                             <input type="email" placeholder="email" className="input input-bordered" {...register("email", { required: true })} />
-                            {errors.email && <span className="text-secondary">This field is required</span>}
+                            {errors.email && <span className="text-[#FF497C]">This field is required</span>}
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Photo URL</span>
+                                <span className="text-black">Photo URL</span>
                             </label>
                             <input type="text" placeholder="photo url" className="input input-bordered" {...register("photo", { required: true })} />
-                            {errors.photo && <span className="text-secondary">This field is required</span>}
+                            {errors.photo && <span className="text-[#FF497C]">This field is required</span>}
                         </div>
                         <div className="form-control relative">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="text-black">Password</span>
                             </label>
                             <input type={showPassword ? "text" : "password"}
                                 placeholder="password"
@@ -91,15 +91,15 @@ const Registration = () => {
                                     showPassword ? <IoEye /> : <IoEyeOff />
                                 }
                             </span>
-                            {errors.password && <span className="text-secondary">This field is required</span>}
+                            {errors.password && <span className="text-[#FF497C]">This field is required</span>}
                             {
-                                passwordError && <small className="text-secondary">{passwordError}</small>
+                                passwordError && <small className="text-[#FF497C]">{passwordError}</small>
                             }
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary font-bold text-lg">Register</button>
+                            <button className="text-lg bg-[#FF497C] py-2 px-3 rounded text-white font-semibold hover:bg-[#988087]">Register</button>
                         </div>
-                        <p className="p-2">Already have an Account? <Link to="/login"><button className="btn btn-link text-lg">Please Login</button></Link></p>
+                        <p className="p-2 text-black">Already have an Account? <Link to="/login"><button className="bg-[#FF497C] py-2 px-3 rounded text-white font-semibold hover:bg-[#988087]">Please Login</button></Link></p>
                     </form>
                 </div>
             </div>

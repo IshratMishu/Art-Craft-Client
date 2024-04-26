@@ -4,7 +4,6 @@ import { createContext, useEffect, useState } from 'react';
 import auth from '../Firebase/firebase.config';
 
 
-
 export const AuthContext = createContext(null);
 
 // social auth providers

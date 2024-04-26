@@ -4,7 +4,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="p-10 bg-[#e5fee4] text-base-content font-poppins mt-10">
+        <footer className="p-10 text-base-content font-poppins mt-28">
             <div className="footer md:flex md:justify-between max-w-6xl mx-auto">
                 <aside>
                     <p className="text-4xl font-bold">ClayCanvas</p>
@@ -26,7 +26,7 @@ const Footer = () => {
                     <a className="link link-hover">Press kit</a>
                 </nav>
             </div>
-            <footer className="footer footer-center px-10 py-4 mt-5 bg-[#e5fee4] text-base-content">
+            <footer className="footer footer-center px-10 py-4 mt-5 text-base-content">
                 <nav>
                     <h6 className="footer-title">Follow Us On</h6>
                     <div className="grid grid-flow-col gap-4">

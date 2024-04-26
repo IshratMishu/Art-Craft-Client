@@ -1,5 +1,5 @@
 import { FaGithub } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
+import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../../Hooks/useAuth";
@@ -62,14 +62,14 @@ const Login = () => {
         <div className="hero min-h-screen bg-base-100 mt-28 mb-14">
             <div className="hero-content flex flex-col">
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold text-primary">Great to have you back!</h1>
+                    <h1 className="text-3xl font-bold text-[#81c784]">Great to have you back!</h1>
 
-                    <div className="flex items-center gap-10 justify-center border mt-5 font-bold text-lg p-2 text-white hover:bg-primary hover:text-black"
+                    <div className="flex items-center gap-10 justify-center border bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]"
                         onClick={() => handleSocialLogin(googleLogin)}>
-                        <FcGoogle />
+                        <FaGoogle />
                         <p>Continue With Google</p>
                     </div>
-                    <div className="flex items-center justify-center gap-10 border mt-5 font-bold text-lg p-2 text-white hover:bg-primary hover:text-black"
+                    <div className="flex items-center justify-center gap-10 border mt-5 bg-[#FF497C] py-2 px-3 rounded text-white font-semibold hover:bg-[#988087]"
                         onClick={() => handleSocialLogin(githubLogin)}>
                         <FaGithub />
                         <p>Continue With Github</p>
@@ -78,33 +78,33 @@ const Login = () => {
 
                 <div className="divider">or</div>
 
-                <div className="card shrink-0 w-full max-w-sm shadow-md shadow-gray-400 bg-base-100">
+                <div className="card shrink-0 w-full max-w-sm shadow-md shadow-gray-400 bg-[#81c784]">
                     <form className="card-body" onSubmit={handleSubmit(onLogin)}>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="text-black">Email</span>
                             </label>
                             <input type="email" placeholder="email" className="input input-bordered" {...register("email", { required: true })} />
-                            {errors.email && <span className="text-secondary">This field is required</span>}
+                            {errors.email && <span className="text-[#FF497C]">This field is required</span>}
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="text-black">Password</span>
                             </label>
                             <input type="password" placeholder="password" className="input input-bordered" {...register("password", { required: true })} />
-                            {errors.password && <span className="text-secondary">This field is required</span>}
+                            {errors.password && <span className="text-[#FF497C]">This field is required</span>}
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <a href="#" className="text-black link link-hover">Forgot password?</a>
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button onClick={() => handleSocialLogin} className="btn btn-primary font-bold" >Login</button>
+                            <button onClick={() => handleSocialLogin} className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]" >Login</button>
                         </div>
                         {
-                            credentials && <small className="text-secondary">{credentials}</small>
+                            credentials && <small className="text-[#FF497C]">{credentials}</small>
                         }
                         <div className="card-text">
-                            <p>New here? <Link to="/registration"><button className="btn btn-link">Create an Account</button></Link></p>
+                            <p className="text-black">New here? <Link to="/registration"><button className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]">Create an Account</button></Link></p>
                         </div>
                     </form>
                 </div>

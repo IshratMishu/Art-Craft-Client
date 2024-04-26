@@ -2,7 +2,6 @@ import img1 from '../../assets/images/bl-img2-removebg-preview.png';
 import img2 from '../../assets/images/close-up-removebg-preview.png';
 import img3 from '../../assets/images/close-up-arrangement-modern-vases__1_-removebg-preview.png';
 
-
 import { EffectFade, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -13,7 +12,7 @@ import "swiper/css/effect-fade";
 
 const Banner = () => {
     return (
-        <div className="lg:h-[600px] bg-[#81c784] mt-20 text-white" >
+        <div className="lg:h-[600px] bg-[#81c784] mt-20 text-white">
             <Swiper
                 effect={"fade"}
                 fadeEffect={{ crossFade: true }}
