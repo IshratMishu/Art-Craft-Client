@@ -12,11 +12,10 @@ const Footer = () => {
                     <p>Copyright © 2024 - All right reserved</p>
                 </aside>
                 <nav>
-                    <h6 className="footer-title">Services</h6>
-                    <a className="link link-hover">Branding</a>
-                    <a className="link link-hover">Design</a>
-                    <a className="link link-hover">Marketing</a>
-                    <a className="link link-hover">Advertisement</a>
+                    <h6 className="footer-title">Contact Us:</h6>
+                    <a className="link link-hover">info@pottery.com</a>
+                    <a className="link link-hover">(212) 555-1234</a>
+                    <a className="link link-hover">123 Main Street, New York City, NY 10001</a>
                 </nav>
                 <nav>
                     <h6 className="footer-title">Company</h6>
@@ -30,9 +29,9 @@ const Footer = () => {
                 <nav>
                     <h6 className="footer-title">Follow Us On</h6>
                     <div className="grid grid-flow-col gap-4">
-                        <ImFacebook2 className="h-8 w-8" />
-                        <FaTwitter className="h-8 w-8" />
-                        <FaInstagramSquare className="h-8 w-8" />
+                        <a href="https://www.facebook.com/"> <ImFacebook2 className="h-8 w-8" /></a>
+                        <a href="https://www.x.com/"> <FaTwitter className="h-8 w-8" /></a>
+                        <a href="https://www.instagram.com/"> <FaInstagramSquare className="h-8 w-8" /></a>
                     </div>
                 </nav>
             </footer>
