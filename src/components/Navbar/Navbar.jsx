@@ -61,7 +61,10 @@ const Navbar = () => {
                             </ul>
                         </div>
                         :
-                        <Link to="/login"><button className="btn btn-primary font-bold">Login</button></Link>
+                        <div className="flex flex-col md:flex-row gap-2">
+                            <Link to="/login"><button className="border-2 font-bold p-1 hover:bg-red-300">Login</button></Link>
+                            <Link to="/registration"><button className="border-2 font-bold p-1 hover:bg-red-300">Register</button></Link>
+                        </div>
                 }
             </div >
         </div >

@@ -4,15 +4,14 @@ import { useState } from "react";
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
 import useAuth from "../../Hooks/useAuth";
-
+import Swal from 'sweetalert2'
 
 
 const Registration = () => {
     const { createUser, updateUserProfile, setReload } = useAuth();
     const [passwordError, setPasswordError] = useState('');
-    const [passwordSuccess, setPasswordSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const [showModal, setShowModal] = useState(false);
+
     const navigate = useNavigate();
     const {
         register,
@@ -28,11 +27,12 @@ const Registration = () => {
             setPasswordError('Password must contain at least one uppercase letter (A-Z), one lowercase letter (a-z), and be at least 6 characters long.');
             return;
         } else {
-            setPasswordSuccess('Registration Successful!');
-            setShowModal(true);
-            setTimeout(() => {
-                setShowModal(false);
-            }, 2000);
+            Swal.fire({
+                title: 'Registration Successful!!',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 1500
+            })
         }
 
 
@@ -43,8 +43,8 @@ const Registration = () => {
                     .then(() => {
                         setReload(true);
                         navigate("/");
-                    })
-            })
+                    });
+            });
     };
 
 
@@ -99,13 +99,6 @@ const Registration = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary font-bold text-lg">Register</button>
                         </div>
-                        {showModal && (
-                            <div className="fixed inset-0 flex items-center justify-center bg-gray-700 bg-opacity-75">
-                                <div className="bg-primary p-6 rounded-md shadow-white shadow-md">
-                                    <p className="text-black font-bold">{passwordSuccess}</p>
-                                </div>
-                            </div>
-                        )}
                         <p className="p-2">Already have an Account? <Link to="/login"><button className="btn btn-link text-lg">Please Login</button></Link></p>
                     </form>
                 </div>
@@ -115,3 +108,4 @@ const Registration = () => {
 };
 
 export default Registration;
+
