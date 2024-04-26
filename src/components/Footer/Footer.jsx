@@ -12,7 +12,7 @@ const Footer = () => {
                     <p>Copyright © 2024 - All right reserved</p>
                 </aside>
                 <nav>
-                    <h6 className="footer-title">Contact Us:</h6>
+                    <h6 className="footer-title">Contact Us</h6>
                     <a className="link link-hover">info@pottery.com</a>
                     <a className="link link-hover">(212) 555-1234</a>
                     <a className="link link-hover">123 Main Street, New York City, NY 10001</a>
