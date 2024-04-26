@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
+import { Link } from 'react-router-dom';
 
 
 const Banner = () => {
@@ -38,7 +39,7 @@ const Banner = () => {
                                     Discover the beauty and craftsmanship of handmade clay pottery.
                                 </p>
                                 <div className="flex justify-center md:justify-start">
-                                    <button className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]">Explore Now</button>
+                                   <Link to='/artAndCraftList'><button className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]">Explore Now</button></Link>
                                 </div>
                             </div>
                             {/* left */}
@@ -60,7 +61,7 @@ const Banner = () => {
                                     Browse our curated selection of pottery decor to find the perfect accents for your home.
                                 </p>
                                 <div className="flex justify-center md:justify-start">
-                                    <button className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]">Browse Here</button>
+                                    <Link to='/allCraftItem'><button className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]">Browse Here</button></Link>
                                 </div>
                             </div>
 
@@ -83,7 +84,7 @@ const Banner = () => {
                                     Transform your surroundings with our premium ceramics designed for architectural applications. Explore our range of tiles, panels, and accents to create spaces that are both stunning and functional.
                                 </p>
                                 <div className="flex justify-center md:justify-start">
-                                    <button className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]"> Shop Now</button>
+                                    <Link to='/error'><button className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]"> Shop Now</button></Link>
                                 </div>
                             </div>
                             <div className="w-full max-h-[400px] flex-1 mb-10 md:mb-0">

@@ -9,7 +9,7 @@ const ErrorPage = () => {
             </Helmet> */}
             <h2 className="font-bold text-6xl">Oops!</h2>
             <p className="font-bold text-xl"> Page Not Found☹️</p>
-            <Link to='/'><button className="btn btn-primary text-black font-bold text-lg mt-5">Go Back to Home</button></Link>
+            <Link to='/'><button className="btn bg-[#81c784] text-black font-bold text-lg mt-5">Go Back to Home</button></Link>
         </div>
         </div>
     );

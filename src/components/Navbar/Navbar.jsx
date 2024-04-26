@@ -7,9 +7,9 @@ const Navbar = () => {
     const linkStyle = ({ isActive }) => {
         return {
             fontWeight: isActive ? "bold" : "",
-            color: isActive ? "#FF497C" : "",
+            color: isActive ? "#81c784" : "",
             background: isActive ? "none" : "none",
-            border: isActive ? "2px solid #FF497C" : "",
+            border: isActive ? "2px solid #81c784" : "",
             fontSize: isActive ? "16px" : "14px"
         };
     };
@@ -35,7 +35,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-lg md:text-3xl">ClayCanvas</a>
+                <a className="btn btn-ghost text-lg md:text-3xl">ClayPottery</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
