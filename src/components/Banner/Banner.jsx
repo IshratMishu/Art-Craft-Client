@@ -1,6 +1,6 @@
-import img1 from '../../assets/close-up-arrangement-modern-vases__1_-removebg-preview.png';
-import img2 from '../../assets/close-up-removebg-preview.png';
-import img3 from '../../assets/still-life-with-plants-deco-removebg-preview.png';
+import img1 from '../../assets/images/bl-img2-removebg-preview.png';
+import img2 from '../../assets/images/close-up-removebg-preview.png';
+import img3 from '../../assets/images/close-up-arrangement-modern-vases__1_-removebg-preview.png';
 
 
 import { EffectFade, Autoplay } from "swiper/modules";
@@ -13,7 +13,7 @@ import "swiper/css/effect-fade";
 
 const Banner = () => {
     return (
-        <div className="lg:h-[600px] bg-[#f6d4c9] mt-20" >
+        <div className="lg:h-[600px] bg-[#92d390] mt-20 text-white" >
             <Swiper
                 effect={"fade"}
                 fadeEffect={{ crossFade: true }}

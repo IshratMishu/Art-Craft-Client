@@ -4,7 +4,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="p-10 bg-base-200 text-base-content font-poppins mt-10">
+        <footer className="p-10 bg-[#e5fee4] text-base-content font-poppins mt-10">
             <div className="footer md:flex md:justify-between max-w-6xl mx-auto">
                 <aside>
                     <p className="text-4xl font-bold">ClayCanvas</p>
@@ -25,20 +25,8 @@ const Footer = () => {
                     <a className="link link-hover">Free Guides</a>
                     <a className="link link-hover">Press kit</a>
                 </nav>
-                <form>
-                    <h6 className="footer-title">Newsletter</h6>
-                    <fieldset className="form-control w-80">
-                        <label className="label">
-                            <span className="label-text">Enter your email address</span>
-                        </label>
-                        <div className="join">
-                            <input type="text" placeholder="username@site.com" className="input input-bordered join-item w-52 md:w-auto" />
-                            <button className="btn btn-primary join-item text-xs w-16 md:w-auto md:text-base">Subscribe</button>
-                        </div>
-                    </fieldset>
-                </form>
             </div>
-            <footer className="footer footer-center px-10 py-4 border-t mt-5 bg-base-200 text-base-content border-base-300">
+            <footer className="footer footer-center bg-[#e5fee4] px-10 py-4 border-t mt-5 bg-base-200 text-base-content border-base-300">
                 <nav>
                     <h6 className="footer-title">Follow Us On</h6>
                     <div className="grid grid-flow-col gap-4">
