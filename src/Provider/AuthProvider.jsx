@@ -1,100 +1,100 @@
-// import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
-// import PropTypes from 'prop-types';
-// import { createContext, useEffect, useState } from 'react';
-// import auth from '../Firebase/firebase.config';
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import PropTypes from 'prop-types';
+import { createContext, useEffect, useState } from 'react';
+import auth from '../Firebase/firebase.config';
 
 
 
-// export const AuthContext = createContext(null);
+export const AuthContext = createContext(null);
 
-// // social auth providers
-// const googleProvider = new GoogleAuthProvider();
-// const githubProvider = new GithubAuthProvider();
+// social auth providers
+const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 
-// const AuthProvider = ({ children }) => {
-//     const [reload, setReload] = useState(false);
-//     const [user, setUser] = useState(null);
-//     const [loading, setLoading] = useState(true);
-
-
-//     // create user
-//     const createUser = (email, password) => {
-//         setLoading(true);
-//         return createUserWithEmailAndPassword(auth, email, password)
-//     }
-
-//     // update user profile
-//     const updateUserProfile = (name, photo) => {
-//         return updateProfile(auth.currentUser, {
-//             displayName: name,
-//             photoURL: photo
-//         })
-//     }
+const AuthProvider = ({ children }) => {
+    const [reload, setReload] = useState(false);
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
 
-//     // sign in user
-//     const signInUser = (email, password) => {
-//         setLoading(true);
-//         return signInWithEmailAndPassword(auth, email, password)
-//     }
+    // create user
+    const createUser = (email, password) => {
+        setLoading(true);
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
 
-//     // Google Login
-//     const googleLogin = () => {
-//         setLoading(true);
-//         return signInWithPopup(auth, googleProvider)
-//     }
-
-//     // Github login
-//     const githubLogin = () => {
-//         setLoading(true);
-//         return signInWithPopup(auth, githubProvider)
-//     }
+    // update user profile
+    const updateUserProfile = (name, photo) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: photo
+        })
+    }
 
 
-//     // logout
-//     const logOut = () => {
-//         return signOut(auth)
-//     }
+    // sign in user
+    const signInUser = (email, password) => {
+        setLoading(true);
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+
+    // Google Login
+    const googleLogin = () => {
+        setLoading(true);
+        return signInWithPopup(auth, googleProvider)
+    }
+
+    // Github login
+    const githubLogin = () => {
+        setLoading(true);
+        return signInWithPopup(auth, githubProvider)
+    }
 
 
-//     // Observer
-//     useEffect(() => {
-//         const unsubscribe = onAuthStateChanged(auth, (user) => {
-//             if (user) {
-//                 setUser(user);
-//                 setLoading(false);
-//             }
-//             else {
-//                 setUser(null);
-//                 setLoading(false);
-//             }
-//         });
-//         return () => unsubscribe();
-//     }, [reload]);
+    // logout
+    const logOut = () => {
+        return signOut(auth)
+    }
 
 
-//     const authInfo = {
-//         createUser,
-//         loading,
-//         signInUser,
-//         googleLogin,
-//         githubLogin,
-//         logOut,
-//         user,
-//         updateUserProfile,
-//         setReload,
-//         setUser
-//     }
+    // Observer
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user);
+                setLoading(false);
+            }
+            else {
+                setUser(null);
+                setLoading(false);
+            }
+        });
+        return () => unsubscribe();
+    }, [reload]);
 
-//     return (
-//         <AuthContext.Provider value={authInfo}>
-//             {children}
-//         </AuthContext.Provider>
-//     );
-// };
 
-// export default AuthProvider;
+    const authInfo = {
+        createUser,
+        loading,
+        signInUser,
+        googleLogin,
+        githubLogin,
+        logOut,
+        user,
+        setReload,
+        setUser,
+        updateUserProfile
+    }
 
-// AuthProvider.propTypes = {
-//     children: PropTypes.node
-// }
+    return (
+        <AuthContext.Provider value={authInfo}>
+            {children}
+        </AuthContext.Provider>
+    );
+};
+
+export default AuthProvider;
+
+AuthProvider.propTypes = {
+    children: PropTypes.node
+}

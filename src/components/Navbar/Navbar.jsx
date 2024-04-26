@@ -1,8 +1,9 @@
-import { NavLink } from "react-router-dom";
-// import useAuth from "../../Hooks/useAuth";
+import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const Navbar = () => {
-    // const { logOut, user } = useAuth();
+    const { logOut, user } = useAuth();
+
 
     const linkStyle = ({ isActive }) => {
         return {
@@ -43,30 +44,26 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            {/* <div className="navbar-end">
+            <div className="navbar-end">
                 {
                     user ?
                         <div className="dropdown dropdown-end">
                             <div tabIndex={0} role="list" className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full cursor-pointer">
-                                    <img alt="Tailwind CSS Navbar component" src={user?.photoURL ? user.photoURL : 'https://i.ibb.co/31dsFpW/icon-7797704-640.webp'} />
+                                    <img title={user?.displayName || 'User Name'} alt="Tailwind CSS Navbar component" src={user?.photoURL ? user.photoURL : 'https://i.ibb.co/31dsFpW/icon-7797704-640.webp'} />
                                 </div>
                             </div>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
                                 <li>
                                     <a className="justify-between">{user?.displayName || 'User Name'}</a>
                                 </li>
-                                <li> <Link to='/updateProfile'>Update Profile</Link> </li>
                                 <li><a onClick={logOut}>Logout</a></li>
                             </ul>
                         </div>
                         :
                         <Link to="/login"><button className="btn btn-primary font-bold">Login</button></Link>
                 }
-            </div > */}
-            <div className="navbar-end">
-                <a className="btn">login</a>
-            </div>
+            </div >
         </div >
     );
 };

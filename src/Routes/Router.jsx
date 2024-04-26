@@ -7,6 +7,7 @@ import Registration from "../components/Registration/Registration";
 import AllCraftItems from "../Pages/AllCraftItems/AllCraftItems";
 import AddCart from "../Pages/AddCart/AddCart";
 import ArtAndCraftList from "../Pages/ArtAndCraftList/ArtAndCraftList";
+import PrivateRoute from "./PrivateRoute";
 
 
 const Router = createBrowserRouter([
@@ -25,11 +26,11 @@ const Router = createBrowserRouter([
             },
             {
                 path: "/addCart",
-                element: <AddCart></AddCart>
+                element: <PrivateRoute><AddCart></AddCart></PrivateRoute>
             },
             {
                 path: "/artAndCraftList",
-                element: <ArtAndCraftList></ArtAndCraftList>
+                element: <PrivateRoute><ArtAndCraftList></ArtAndCraftList></PrivateRoute>
             },
             {
                 path: "/login",
