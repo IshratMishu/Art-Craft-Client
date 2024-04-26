@@ -13,7 +13,7 @@ import "swiper/css/effect-fade";
 
 const Banner = () => {
     return (
-        <div className="lg:h-[600px] bg-[#92d390] mt-20 text-white" >
+        <div className="lg:h-[600px] bg-[#81c784] mt-20 text-white" >
             <Swiper
                 effect={"fade"}
                 fadeEffect={{ crossFade: true }}

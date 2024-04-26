@@ -10,10 +10,10 @@ const Navbar = () => {
             fontWeight: isActive ? "bold" : "",
             color: isActive ? "#FF497C" : "",
             background: isActive ? "none" : "none",
+            border: isActive ? "2px solid #FF497C" : "",
             fontSize: isActive ? "18px" : "18px"
         };
     };
-
 
     const links = <>
 
@@ -62,8 +62,8 @@ const Navbar = () => {
                         </div>
                         :
                         <div className="flex flex-col md:flex-row gap-2">
-                            <Link to="/login"><button className="border-2 font-bold p-1 hover:bg-red-300">Login</button></Link>
-                            <Link to="/registration"><button className="border-2 font-bold p-1 hover:bg-red-300">Register</button></Link>
+                            <Link to="/login"><button className="bg-[#FF497C] p-1 lg:py-2 rounded text-white font-semibold hover:bg-[#988087]">Login</button></Link>
+                            <Link to="/registration"><button className="bg-[#FF497C] rounded p-1 lg:py-2 text-white font-semibold hover:bg-[#988087]">Register</button></Link>
                         </div>
                 }
             </div >

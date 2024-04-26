@@ -26,7 +26,7 @@ const Footer = () => {
                     <a className="link link-hover">Press kit</a>
                 </nav>
             </div>
-            <footer className="footer footer-center bg-[#e5fee4] px-10 py-4 border-t mt-5 bg-base-200 text-base-content border-base-300">
+            <footer className="footer footer-center px-10 py-4 mt-5 bg-[#e5fee4] text-base-content">
                 <nav>
                     <h6 className="footer-title">Follow Us On</h6>
                     <div className="grid grid-flow-col gap-4">
