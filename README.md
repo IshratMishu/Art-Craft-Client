@@ -1,6 +1,7 @@
 # Website Name: ClayPottery
 
 **Category:** Ceramics and Pottery
+
 **Live Site URL:**  https://art-and-craft-a65d0.web.app/
 
 **Features and Characteristics of my
