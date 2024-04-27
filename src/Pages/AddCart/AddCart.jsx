@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
-
+import back1 from '../../assets/images/vase.png';
 const AddCart = () => {
     const { user } = useAuth() || {};
     const handleAddPottery = e => {
@@ -45,9 +45,9 @@ const AddCart = () => {
         form.reset();
     }
     return (
-        <div className="lg:p-24 md:p-14 p-2 space-y-10 md:mt-14 mt-28">
-            <div className="border-2 border-[#81c784] shadow-md shadow-[#81c784] md:p-10 p-3">
-                <h2 className="text-3xl font-bold text-center text-black mb-16">Add Your Ceramics and Pottery Items</h2>
+        <div className="lg:p-24 md:p-14 p-2 space-y-10 md:mt-14 mt-32" style={{ backgroundImage: `url(${back1})`, backgroundRepeat:'no-repeat', backgroundPosition:'right top'}}>
+            <div className="shadow-md shadow-[#81c784] rounded-xl md:p-10 p-3" >
+                <h2 className="text-3xl font-bold text-center text-[#81c784] mb-16">Add Your Ceramics and Pottery Items</h2>
                 <form className="space-y-5" onSubmit={handleAddPottery}>
                     {/* form row 1*/}
                     <div className="md:flex gap-4">

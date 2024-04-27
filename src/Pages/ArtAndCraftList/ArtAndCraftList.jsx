@@ -79,7 +79,7 @@ const ArtAndCraftList = () => {
     return (
         <div className="mt-36">
             <div className="text-center md:text-3xl md:font-bold text-xl font-semibold text-[#81c784] mx-auto p-5">
-                <label htmlFor="customizationFilter" className="">Filter by Customization:</label>
+                <label htmlFor="customizationFilter">Filter by Customization:</label>
                 <select
                     id="customizationFilter"
                     value={filter}
@@ -96,8 +96,8 @@ const ArtAndCraftList = () => {
             <div className="m-5">
                 <div className="mt-16 grid grid-cols-1 gap-10 md:grid-cols-2">
                     {filteredItems.map((adding) => (
-                        <div key={adding._id} className="card bg-base-100 shadow-xl">
-                            <figure><img className="w-96 h-96" src={adding.image} alt="Pottery" /></figure>
+                        <div key={adding._id} className="card bg-base-100 shadow-lg shadow-[#81c784]">
+                            <figure><img className="w-96 h-60" src={adding.image} alt="Pottery" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">{adding.item_name}</h2>
                                 <p>{adding.price}</p>
