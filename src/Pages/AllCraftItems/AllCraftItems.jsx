@@ -2,8 +2,10 @@ import { useLoaderData } from "react-router-dom";
 import SingleCraftItem from "../SingleCraftItem/SingleCraftItem";
 import back from "../../assets/images/vaseq.png";
 
+
 const AllCraftItems = () => {
     const allPottery = useLoaderData();
+
     return (
         <div className="mt-32">
     <div className="text-center space-y-3" style={{ backgroundImage: `url(${back})`}}>

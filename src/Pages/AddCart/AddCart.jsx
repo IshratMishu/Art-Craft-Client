@@ -1,6 +1,8 @@
 import Swal from 'sweetalert2';
+import useAuth from '../../Hooks/useAuth';
 
 const AddCart = () => {
+    const { user } = useAuth() || {};
     const handleAddPottery = e => {
         e.preventDefault();
         const form = e.target;
@@ -13,10 +15,10 @@ const AddCart = () => {
         const customize = form.customize.value;
         const stockStatus = form.stockStatus.value;
         const description = form.description.value;
-        const user_email = form.user_email.value;
-        const user_name = form.user_name.value;
+        const email = user.email;
+        const name = user.displayName;
 
-        const newPottery = { item_name, subcategory, price, rating, time, image, customize, stockStatus, description, user_email , user_name};
+        const newPottery = { item_name, subcategory, price, rating, time, image, customize, stockStatus, description, email, name};
         console.log(newPottery);
 
         // send data to the server
@@ -145,7 +147,7 @@ const AddCart = () => {
                                 <span className="label-text font-bold">User Email</span>
                             </label>
                             <label className="input input-bordered flex items-center gap-2">
-                                <input type="text" name="user_email" className="grow" placeholder="user_email" />
+                                <input type="text" name="email" className="grow" placeholder="email" />
                             </label>
                         </div>
                         <div className="form-control md:w-1/2">
@@ -153,7 +155,7 @@ const AddCart = () => {
                                 <span className="label-text font-bold">User Name</span>
                             </label>
                             <label className="input input-bordered flex items-center gap-2">
-                                <input type="text" name="user_name" className="grow" placeholder="user_name" />
+                                <input type="text" name="name" className="grow" placeholder="name" />
                             </label>
                         </div>
                     </div>

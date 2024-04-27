@@ -33,12 +33,12 @@ const Router = createBrowserRouter([
             },
             {
                 path: "/artAndCraftList",
-                element: <PrivateRoute><ArtAndCraftList></ArtAndCraftList></PrivateRoute>
+                element: <PrivateRoute><ArtAndCraftList></ArtAndCraftList></PrivateRoute>,
+                loader: () => fetch('http://localhost:5000/potteries')
             },
             {
-                path: "/viewDetail/:_id",
-                element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/potteries')
+                path: "/viewDetail/:id",
+                element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>
             },
             {
                 path: "/login",
