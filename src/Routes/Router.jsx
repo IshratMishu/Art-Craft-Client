@@ -8,6 +8,7 @@ import AllCraftItems from "../Pages/AllCraftItems/AllCraftItems";
 import AddCart from "../Pages/AddCart/AddCart";
 import ArtAndCraftList from "../Pages/ArtAndCraftList/ArtAndCraftList";
 import PrivateRoute from "./PrivateRoute";
+import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 
 
 const Router = createBrowserRouter([
@@ -32,6 +33,11 @@ const Router = createBrowserRouter([
             {
                 path: "/artAndCraftList",
                 element: <PrivateRoute><ArtAndCraftList></ArtAndCraftList></PrivateRoute>
+            },
+            {
+                path: "/viewDetail/:_id",
+                element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+                loader: () => fetch('http://localhost:5000/potteries')
             },
             {
                 path: "/login",
