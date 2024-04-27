@@ -17,9 +17,9 @@ const Navbar = () => {
     const links = <>
 
         <li><NavLink to='/' style={linkStyle}>Home</NavLink></li>
-        <li><NavLink to='/allCraftItem' style={linkStyle}>All Art & craft Items</NavLink></li>
-        <li><NavLink to='/addCart' style={linkStyle}>Add Craft Item</NavLink></li>
-        <li><NavLink to='/artAndCraftList' style={linkStyle}>My Art&Craft List</NavLink></li>
+        <li><NavLink to='/allCraftItem' style={linkStyle}>All Pottery & Ceramics</NavLink></li>
+        <li><NavLink to='/addCart' style={linkStyle}>Add Product</NavLink></li>
+        <li><NavLink to='/artAndCraftList' style={linkStyle}>My List</NavLink></li>
         {/* <li><NavLink to='/contact' style={linkStyle}>Contact Us</NavLink></li> */}
     </>
 

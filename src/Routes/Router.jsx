@@ -24,7 +24,8 @@ const Router = createBrowserRouter([
             },
             {
                 path: "/allCraftItem",
-                element: <AllCraftItems></AllCraftItems>
+                element: <AllCraftItems></AllCraftItems>,
+                loader: () => fetch('http://localhost:5000/potteries')
             },
             {
                 path: "/addCart",
