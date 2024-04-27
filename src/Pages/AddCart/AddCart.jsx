@@ -18,30 +18,30 @@ const AddCart = () => {
         const email = user.email;
         const name = user.displayName;
 
-        const newPottery = { item_name, subcategory, price, rating, time, image, customize, stockStatus, description, email, name};
+        const newPottery = { item_name, subcategory, price, rating, time, image, customize, stockStatus, description, email, name };
         console.log(newPottery);
 
         // send data to the server
-        fetch('http://localhost:5000/potteries',{
+        fetch('http://localhost:5000/potteries', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(newPottery)
         })
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data);
-            if(data.insertedId){
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Your item added successfully',
-                    icon: 'success',
-                    confirmButtonColor: "#FF497C",
-                    confirmButtonText: 'Okay'
-                  })
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Your item added successfully',
+                        icon: 'success',
+                        confirmButtonColor: "#FF497C",
+                        confirmButtonText: 'Okay'
+                    })
+                }
+            })
         form.reset();
     }
     return (
@@ -63,9 +63,15 @@ const AddCart = () => {
                             <label className="label">
                                 <span className="label-text font-bold">SubCategory Name</span>
                             </label>
-                            <label className="input input-bordered flex items-center gap-2">
-                                <input type="text" name="subcategory" className="grow" placeholder="subcategory_name" />
-                            </label>
+                            <select className="select input input-bordered" type="text" name="subcategory">
+                                <option disabled selected>Choose One</option>
+                                <option>Clay-made pottery</option>
+                                <option>Stoneware</option>
+                                <option>Porcelain</option>
+                                <option>Terra Cotta</option>
+                                <option>Ceramics & Architectural</option>
+                                <option>Home decor pottery</option>
+                            </select>
                         </div>
                     </div>
 
@@ -147,7 +153,7 @@ const AddCart = () => {
                                 <span className="label-text font-bold">User Email</span>
                             </label>
                             <label className="input input-bordered flex items-center gap-2">
-                                <input type="text" name="email" className="grow" placeholder="email" />
+                                <input type="text" name="email" className="grow" placeholder="email" defaultValue={user.email} />
                             </label>
                         </div>
                         <div className="form-control md:w-1/2">
@@ -155,7 +161,7 @@ const AddCart = () => {
                                 <span className="label-text font-bold">User Name</span>
                             </label>
                             <label className="input input-bordered flex items-center gap-2">
-                                <input type="text" name="name" className="grow" placeholder="name" />
+                                <input type="text" name="name" className="grow" placeholder="name" defaultValue={user.displayName} />
                             </label>
                         </div>
                     </div>
