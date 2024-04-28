@@ -31,29 +31,7 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className="md:h-[500px] h-auto">
                         <div className="h-full flex flex-col md:flex-row justify-between md:gap-2 gap-10 items-center">
-                            <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto p-2 md:p-10">
-                                <p className="text-[30px] lg:text-[40px] md:text-[32px] font-bold text-center md:text-left">
-                                    Shop Handcrafted Clay Pottery For Timeless Elegance
-                                </p>
-                                <p className="font-medium text-black/60 md:text-lg text-center md:text-left mt-4">
-                                    Discover the beauty and craftsmanship of handmade clay pottery.
-                                </p>
-                                <div className="flex justify-center md:justify-start">
-                                   <Link to='/artAndCraftList'><button className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]">Explore Now</button></Link>
-                                </div>
-                            </div>
-                            {/* left */}
-                            <div className="w-full md:max-h-[400px] h-[250px] flex-1 mb-10 md:mb-0" >
-                                <img src={img1} alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                {/* slide 2 */}
-                <SwiperSlide>
-                    <div className="md:h-[500px] h-auto">
-                        <div className="h-full flex flex-col md:flex-row justify-between md:gap-2 gap-10 items-center">
-                            <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto p-2 md:p-10">
+                            <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto p-2 md:p-10 mx-auto lg:mx-16">
                                 <p className="text-[30px] lg:text-[40px] md:text-[32px] font-bold text-center md:text-left">
                                     Find Your Perfect Home Decor Pottery at Our Store
                                 </p>
@@ -72,11 +50,33 @@ const Banner = () => {
                         </div>
                     </div>
                 </SwiperSlide>
+                {/* slide 2 */}
+                <SwiperSlide>
+                    <div className="md:h-[500px] h-auto">
+                        <div className="h-full flex flex-col md:flex-row justify-between md:gap-2 gap-10 items-center">
+                            <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto p-2 md:p-10 mx-auto lg:mx-16">
+                                <p className="text-[30px] lg:text-[40px] md:text-[32px] font-bold text-center md:text-left">
+                                    Shop Handcrafted Clay Pottery For Timeless Elegance
+                                </p>
+                                <p className="font-medium text-black/60 md:text-lg text-center md:text-left mt-4">
+                                    Discover the beauty and craftsmanship of handmade clay pottery.
+                                </p>
+                                <div className="flex justify-center md:justify-start">
+                                    <Link to='/artAndCraftList'><button className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]">Explore Now</button></Link>
+                                </div>
+                            </div>
+                            {/* left */}
+                            <div className="w-full md:max-h-[400px] h-[250px] flex-1 mb-10 md:mb-0" >
+                                <img src={img1} alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
                 {/* slide 3 */}
                 <SwiperSlide>
                     <div className="md:h-[500px] h-auto">
                         <div className="h-full flex flex-col md:flex-row justify-between md:gap-2 gap-10 items-center">
-                            <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto p-2 md:p-10">
+                            <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto p-2 md:p-10 mx-auto lg:mx-16">
                                 <p className="text-[30px] lg:text-[40px] md:text-[32px] font-bold text-center md:text-left">
                                     Elevate Your Space with Ceramic Architectural Elements
                                 </p>

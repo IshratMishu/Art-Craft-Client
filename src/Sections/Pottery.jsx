@@ -3,6 +3,7 @@ import 'aos/dist/aos.css';
 import Lottie from "lottie-react";
 import AI from '../assets/Animation - 1714103727641.json';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Pottery = () => {
@@ -16,7 +17,7 @@ const Pottery = () => {
             <div className="lg:p-14 p-5 space-y-5 text-center lg:text-start">
                 <h1 className="text-3xl font-bold">Shop our exquisite pottery collection, <br />curated since 1992.</h1>
                 <p className='text-black/60 font-medium'>Elevate your space with our timeless creations. </p>
-                <button className='bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]'> Shop Now!</button>
+                <Link to='/error'><button className='bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]'> Shop Now!</button></Link>
             </div>
         </div>
     );

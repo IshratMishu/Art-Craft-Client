@@ -18,7 +18,7 @@ const ViewDetails = () => {
         <div className="mt-28">
             <div className="bg-base-100 shadow-xl">
                 <div className="flex flex-col lg:flex-row p-5 md:p-10">
-                    <img className="w-[450px] md:mx-auto" src={pottery.image} alt="Album" />
+                    <img className="w-[450px] md:mx-auto lg:mx-0" src={pottery.image} alt="Album" />
                     <div className="p-10 space-y-5">
                         <h2 className="card-title font-bold text-2xl">{pottery.item_name}</h2>
                         <p className="text-lg">{pottery.price}</p>
