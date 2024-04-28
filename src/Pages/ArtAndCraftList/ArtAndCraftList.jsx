@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const ArtAndCraftList = () => {
     const { user } = useAuth() || {};
@@ -27,7 +28,7 @@ const ArtAndCraftList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/delete/${_id}`, {
+                fetch(`http://localhost:5000/potteries/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -45,6 +46,8 @@ const ArtAndCraftList = () => {
         })
     }
 
+
+   
 
     const handleFilterChange = (e) => {
         setFilter(e.target.value);
@@ -93,7 +96,7 @@ const ArtAndCraftList = () => {
                                 <p><span className="font-semibold">Customizable:</span> {adding.customize}</p>
                                 <p><span className="font-semibold">Stock Status:</span> {adding.stockStatus}</p>
                                 <div className="card-actions justify-center lg:justify-end">
-                                    <div className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]">Update</div>
+                                   <Link to={`/updateProducts/${adding._id}`}> <div className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]">Update</div></Link>
                                     <div className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]"
                                         onClick={() => handleDelete(adding._id)}>Delete</div>
                                 </div>

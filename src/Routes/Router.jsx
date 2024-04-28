@@ -9,6 +9,7 @@ import AddCart from "../Pages/AddCart/AddCart";
 import ArtAndCraftList from "../Pages/ArtAndCraftList/ArtAndCraftList";
 import PrivateRoute from "./PrivateRoute";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
+import UpdateProducts from "../Pages/UpdateProducts/UpdateProducts";
 
 
 const Router = createBrowserRouter([
@@ -48,6 +49,11 @@ const Router = createBrowserRouter([
                 path: "/registration",
                 element: <Registration></Registration>
             },
+            {
+                path: "/updateProducts/:id",
+                element: <PrivateRoute><UpdateProducts></UpdateProducts></PrivateRoute>,
+                loader: ({params})=>fetch(`http://localhost:5000/potteries/${params.id}`)
+            }
         ],
     },
 ]);
