@@ -10,6 +10,7 @@ import ArtAndCraftList from "../Pages/ArtAndCraftList/ArtAndCraftList";
 import PrivateRoute from "./PrivateRoute";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import UpdateProducts from "../Pages/UpdateProducts/UpdateProducts";
+import FilteredCategory from "../Pages/FilteredCategory/FilteredCategory";
 
 
 const Router = createBrowserRouter([
@@ -53,6 +54,10 @@ const Router = createBrowserRouter([
                 path: "/updateProducts/:id",
                 element: <PrivateRoute><UpdateProducts></UpdateProducts></PrivateRoute>,
                 loader: ({params})=>fetch(`http://localhost:5000/potteries/${params.id}`)
+            },
+            {
+                path: "/filteredCategory/:subcategory",
+                element: <FilteredCategory></FilteredCategory>
             }
         ],
     },

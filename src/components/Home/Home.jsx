@@ -4,9 +4,11 @@ import ComingSoon from "../../Sections/ComingSoon";
 import Pottery from "../../Sections/Pottery";
 import Banner from "../Banner/Banner";
 import bg from '../../assets/images/vaseq.png';
+import SubPotteryData from "../../Pages/SubPotteryData/SubPotteryData";
 
 const Home = () => {
-    const pottery = useLoaderData();
+    const potteryClay = useLoaderData();
+
     return (
         <div>
             <Banner></Banner>
@@ -15,12 +17,13 @@ const Home = () => {
                 <p className="text-sm">Latest Products</p>
                 <h1 className="text-2xl">~PERFECT DECOR PIECES FOR DAILY LIFE~</h1>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-4 overflow-hidden" >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-4 overflow-hidden">
                 {
-                    pottery.slice(0,6).map(potter => <CardsData key={potter._id} potter={potter}></CardsData>)
+                   potteryClay.slice(0,6).map(potter => <CardsData key={potter._id} potter={potter}></CardsData>)
                 }
             </div>
             <ComingSoon></ComingSoon>
+            <SubPotteryData></SubPotteryData>
         </div>
     );
 };

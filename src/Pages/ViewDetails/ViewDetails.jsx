@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 const ViewDetails = () => {
     const { id } = useParams();
-    const [pottery, setPottery] = useState({});
+    const [pottery, setPottery] = useState([]);
 
     useEffect(() => {
         fetch(`http://localhost:5000/singleDetail/${id}`)
@@ -12,7 +12,7 @@ const ViewDetails = () => {
             .then(data => {
                 setPottery(data);
             })
-    }, [id])
+    }, [id]);
 
     return (
         <div className="mt-28">
@@ -22,13 +22,13 @@ const ViewDetails = () => {
                     <div className="p-10 space-y-5">
                         <h2 className="card-title font-bold text-2xl">{pottery.item_name}</h2>
                         <p className="text-lg">{pottery.price}</p>
-                        <p> <div className="rating">
+                        <div> <div className="rating">
                             <input type="radio" name="rating-1" className="mask mask-star w-3 h-3" />
                             <input type="radio" name="rating-1" className="mask mask-star w-3 h-3" />
                             <input type="radio" name="rating-1" className="mask mask-star w-3 h-3" />
-                            <input type="radio" name="rating-1" className="mask mask-star w-3 h-3" checked />
+                            <input type="radio" name="rating-1" className="mask mask-star w-3 h-3" defaultChecked />
                             <input type="radio" name="rating-1" className="mask mask-star w-3 h-3" />
-                        </div>  {pottery.rating}</p>
+                        </div>  {pottery.rating}</div>
                         <p><span className="text-lg md:text-xl font-medium">Description:</span> {pottery.description}</p>
 
                     </div>
@@ -65,9 +65,6 @@ const ViewDetails = () => {
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     );
 };

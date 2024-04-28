@@ -1,8 +1,12 @@
 import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
 import back1 from '../../assets/images/vase.png';
+
+
 const AddCart = () => {
     const { user } = useAuth() || {};
+
+
     const handleAddPottery = e => {
         e.preventDefault();
         const form = e.target;
@@ -64,7 +68,6 @@ const AddCart = () => {
                                 <span className="label-text font-bold">SubCategory Name</span>
                             </label>
                             <select className="select input input-bordered" type="text" name="subcategory">
-                                <option disabled selected>Choose One</option>
                                 <option>Clay-made pottery</option>
                                 <option>Stoneware</option>
                                 <option>Porcelain</option>
@@ -121,7 +124,6 @@ const AddCart = () => {
                                 <span className="label-text font-bold">Customization</span>
                             </label>
                             <select className="select input input-bordered" type="text" name="customize">
-                                <option disabled selected>Choose One</option>
                                 <option>Yes</option>
                                 <option>No</option>
                             </select>
@@ -131,7 +133,6 @@ const AddCart = () => {
                                 <span className="label-text font-bold">Stock Status </span>
                             </label>
                             <select className="select input input-bordered" type="text" name="stockStatus">
-                                <option disabled selected>Choose One</option>
                                 <option>In stock</option>
                                 <option>Made to Order</option>
                             </select>
