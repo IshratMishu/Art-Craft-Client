@@ -7,7 +7,7 @@ const ViewDetails = () => {
     const [pottery, setPottery] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleDetail/${id}`)
+        fetch(`https://full-stack-project-assignment10-server.vercel.app/singleDetail/${id}`)
             .then(res => res.json())
             .then(data => {
                 setPottery(data);

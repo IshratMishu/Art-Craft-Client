@@ -8,7 +8,7 @@ const FilteredCategory = () => {
     const [filteredPottery, setFilteredPottery] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/subPotteries/${subcategory}`)
+        fetch(`https://full-stack-project-assignment10-server.vercel.app/subPotteries/${subcategory}`)
             .then(res => res.json())
             .then(data => {
                 const matchedPottery = data.filter(item => item.subcategory === subcategory);

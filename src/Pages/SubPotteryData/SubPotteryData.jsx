@@ -7,7 +7,7 @@ const SubPotteryData = () => {
 const [ceramics, subCeramics] = useState([]);
 
 useEffect(()=>{
-    fetch('http://localhost:5000/subPotteries')
+    fetch('https://full-stack-project-assignment10-server.vercel.app/subPotteries')
     .then(res => res.json())
     .then(data =>{
         subCeramics(data);

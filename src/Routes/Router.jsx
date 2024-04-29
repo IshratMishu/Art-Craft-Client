@@ -22,12 +22,12 @@ const Router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/potteries')
+                loader: () => fetch('https://full-stack-project-assignment10-server.vercel.app/potteries')
             },
             {
                 path: "/allCraftItem",
                 element: <AllCraftItems></AllCraftItems>,
-                loader: () => fetch('http://localhost:5000/potteries')
+                loader: () => fetch('https://full-stack-project-assignment10-server.vercel.app/potteries')
             },
             {
                 path: "/addCart",
@@ -53,7 +53,7 @@ const Router = createBrowserRouter([
             {
                 path: "/updateProducts/:id",
                 element: <PrivateRoute><UpdateProducts></UpdateProducts></PrivateRoute>,
-                loader: ({params})=>fetch(`http://localhost:5000/potteries/${params.id}`)
+                loader: ({params})=>fetch(`https://full-stack-project-assignment10-server.vercel.app/potteries/${params.id}`)
             },
             {
                 path: "/filteredCategory/:subcategory",

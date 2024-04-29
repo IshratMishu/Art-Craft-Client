@@ -7,7 +7,7 @@ const UpdateProducts = () => {
     const potter = useLoaderData();
     const { _id, item_name, price, rating, image, time, description, customize, stockStatus, subcategory } = potter;
 
-    
+
     const handleUpdate = e => {
         e.preventDefault();
         const form = e.target;
@@ -24,7 +24,7 @@ const UpdateProducts = () => {
         const updatingPottery = { item_name, subcategory, price, rating, time, image, customize, stockStatus, description };
 
         // send data to the server
-        fetch(`http://localhost:5000/updatePottery/${_id}`, {
+        fetch(`https://full-stack-project-assignment10-server.vercel.app/updatePottery/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

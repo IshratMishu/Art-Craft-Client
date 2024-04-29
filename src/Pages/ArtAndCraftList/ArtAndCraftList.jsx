@@ -14,7 +14,7 @@ const ArtAndCraftList = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addList/${user?.email}`)
+        fetch(`https://full-stack-project-assignment10-server.vercel.app/addList/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setItems(data);
@@ -33,7 +33,7 @@ const ArtAndCraftList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/delete/${_id}`, {
+                fetch(`https://full-stack-project-assignment10-server.vercel.app/delete/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const ComingSoon = () => {
     return (
-        <div className='h-[600px] mt-32 mx-auto bg-center' style={{ backgroundImage: `url(${soon})` }}>
+        <div className='h-[600px] mt-40 mx-auto bg-center' style={{ backgroundImage: `url(${soon})` }}>
             <div className=' inset-0 bg-[#50d556] bg-opacity-30 h-[600px]'>
                 <div className='text-center px-10 py-20 space-y-6 text-white'>
                     <h1 className='text-[30px] lg:text-[40px] md:text-[32px] font-bold'>Get ready to elevate your space with our upcoming <span>

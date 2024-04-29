@@ -25,7 +25,7 @@ const AddCart = () => {
         const newPottery = { item_name, subcategory, price, rating, time, image, customize, stockStatus, description, email, name };
 
         // send data to the server
-        fetch('http://localhost:5000/potteries', {
+        fetch('https://full-stack-project-assignment10-server.vercel.app/potteries', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
