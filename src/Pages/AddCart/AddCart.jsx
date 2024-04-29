@@ -166,7 +166,6 @@ const AddCart = () => {
                             </label>
                         </div>
                     </div>
-
                     <input type="submit" value="Add" className="bg-[#FF497C] btn btn-block py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]" />
                 </form>
             </div>
