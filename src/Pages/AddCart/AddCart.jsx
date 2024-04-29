@@ -23,7 +23,6 @@ const AddCart = () => {
         const name = user.displayName;
 
         const newPottery = { item_name, subcategory, price, rating, time, image, customize, stockStatus, description, email, name };
-        console.log(newPottery);
 
         // send data to the server
         fetch('http://localhost:5000/potteries', {
@@ -35,7 +34,6 @@ const AddCart = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',

@@ -89,7 +89,6 @@ const ArtAndCraftList = () => {
                 </select>
             </div>
 
-
             <div className="m-5">
                 <h1 className="text-center font-semibold text-2xl mt-16 text-gray-700">~Welcome to Your List : Where Fantasies Take Shape! ~</h1>
                 <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10">

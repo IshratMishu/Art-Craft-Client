@@ -6,6 +6,8 @@ const UpdateProducts = () => {
     const navigate = useNavigate();
     const potter = useLoaderData();
     const { _id, item_name, price, rating, image, time, description, customize, stockStatus, subcategory } = potter;
+
+    
     const handleUpdate = e => {
         e.preventDefault();
         const form = e.target;
@@ -20,7 +22,6 @@ const UpdateProducts = () => {
         const description = form.description.value;
 
         const updatingPottery = { item_name, subcategory, price, rating, time, image, customize, stockStatus, description };
-        console.log(updatingPottery);
 
         // send data to the server
         fetch(`http://localhost:5000/updatePottery/${_id}`, {
@@ -32,7 +33,6 @@ const UpdateProducts = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
@@ -68,7 +68,6 @@ const UpdateProducts = () => {
                                 <span className="label-text font-bold">SubCategory Name</span>
                             </label>
                             <select className="select input input-bordered" type="text" name="subcategory" defaultValue={subcategory}>
-                                <option disabled selected>Choose One</option>
                                 <option>Clay-made pottery</option>
                                 <option>Stoneware</option>
                                 <option>Porcelain</option>
@@ -125,7 +124,6 @@ const UpdateProducts = () => {
                                 <span className="label-text font-bold">Customization</span>
                             </label>
                             <select className="select input input-bordered" type="text" name="customize" defaultValue={customize}>
-                                <option disabled selected>Choose One</option>
                                 <option>Yes</option>
                                 <option>No</option>
                             </select>
@@ -135,7 +133,6 @@ const UpdateProducts = () => {
                                 <span className="label-text font-bold">Stock Status </span>
                             </label>
                             <select className="select input input-bordered" type="text" name="stockStatus" defaultValue={stockStatus}>
-                                <option disabled selected>Choose One</option>
                                 <option>In stock</option>
                                 <option>Made to Order</option>
                             </select>
