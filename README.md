@@ -23,3 +23,6 @@ ___
 -  [AOS Package](https://www.npmjs.com/package/aos) for scrolling animation.
 -  [Swipper Slider](https://swiperjs.com/) for banner slides.
 -  [React Hook Form](https://react-hook-form.com/) for easy-to-use form validation.
+
+
+Server Side: https://github.com/IshratMishu/Art-Craft-Server
