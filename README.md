@@ -24,5 +24,6 @@ ___
 -  [Swipper Slider](https://swiperjs.com/) for banner slides.
 -  [React Hook Form](https://react-hook-form.com/) for easy-to-use form validation.
 
+___
 
-Server Side: https://github.com/IshratMishu/Art-Craft-Server
+**Server Side:** https://github.com/IshratMishu/Art-Craft-Server
