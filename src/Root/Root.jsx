@@ -1,7 +1,7 @@
 
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 
 const Root = () => {
@@ -11,6 +11,7 @@ const Root = () => {
             <ToastContainer />
             <Outlet></Outlet>
             <Footer></Footer>
+            <ScrollRestoration></ScrollRestoration>
         </div>
     );
 };
